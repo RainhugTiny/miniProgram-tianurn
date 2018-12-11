@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="container">
+<!-- <view style="background-image: url('http://i1.hoopchina.com.cn/u/1801/29/144/1144/67eae378jpg.jpg')"></view> -->
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else> -->
+      <!-- <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
+      <text>北京天气</text>
+      <text>日期：12月11日 星期二</text>
+      <text>天气：🌤</text>
+      <text>温度:-2°~-14°</text>
+      <text>风速：西北偏北 每秒8米</text>
+      <text>湿度：16%</text>
+      <!-- <image style="width:100%;height:300px;background-color:#eeeeee;" src="{{src}}"></image> -->
+    <!-- </block>
+  </view> -->
+  <!-- <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+</view>
