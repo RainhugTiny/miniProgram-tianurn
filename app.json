@@ -1,7 +1,8 @@
 {
   "pages":[
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/lifeindex/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -10,12 +11,21 @@
     "navigationBarTextStyle":"black"
   },
   "tabBar":{
+    "color":"#dddddd",
+    "selectedColor":"#3cc51f",
+    "borderStyle":"black",
+    "backgroundColor":"#ffffff",
     "list":[{
       "pagePath":"pages/index/index",
-      "text":"首页"
-      },{
-      "pagePath":"pages/index/index",
-      "text":"日志"
+      "iconPath":"images/wechat.jpg",
+      "selectedIconPath":"images/wechatHL.jpg",
+      "text":"天气预报"
+      },
+      {
+      "pagePath": "pages/lifeindex/index",
+      "iconPath": "images/wechat.jpg",
+      "selectedIconPath": "images/wechatHL.jpg",
+      "text": "生活指数"
       }]
     
   }

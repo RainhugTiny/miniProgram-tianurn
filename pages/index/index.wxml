@@ -1,21 +1,51 @@
 <!--index.wxml-->
-<view class="container">
-<!-- <view style="background-image: url('http://i1.hoopchina.com.cn/u/1801/29/144/1144/67eae378jpg.jpg')"></view> -->
-  <!-- <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else> -->
-      <!-- <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
-      <text>北京天气</text>
-      <text>日期：12月11日 星期二</text>
-      <text>天气：🌤</text>
-      <text>温度:-2°~-14°</text>
-      <text>风速：西北偏北 每秒8米</text>
-      <text>湿度：16%</text>
-      <!-- <image style="width:100%;height:300px;background-color:#eeeeee;" src="{{src}}"></image> -->
-    <!-- </block>
-  </view> -->
-  <!-- <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view> -->
+<view class="container"><!--整体布局-->  
+ <!--今日天气-->   
+  <view class="nowWeather">     
+   <view class="city w">{{city}} {{district}}</view>     
+   <view class="road w">{{street}}</view>     
+   <view class="date w b center">{{curdate}}</view>     
+   <view class="temp w b center">{{curtmp}}</view>     
+   <view class = "center">       
+     <text class = "f50 w b right">{{weather}} </text>       
+     <image class="img" src="{{pic1}}"></image>       
+     <image class="img" src="{{pic2}}"></image>     
+   </view>   
+ </view> 
+ 
+  <!--今日详细天气-->   
+   <view class="weahterDetail">     
+     <view class="">       
+       <view class="w center">今日天气</view>       
+       <view class="w b center f40">{{tmp}}</view>     
+     </view>     
+     <view class="l"></view>     
+     <view class="">       
+       <view class="w center">风向</view>       
+       <view class="w b center f40">{{wind}}</view>     
+     </view>     
+     <view class="l"></view>     
+     <view class=""> 
+       <view class="w center">PM2.5</view>       
+       <view class="w b center f40">{{pm25}}</view>     
+     </view>   
+  </view> 
+ 
+<!--近日天气预报--> 
+ 
+<view class="w forcast">近日天气预报</view>  
+<view wx:for="{{forecast}}" wx:for-index="i" wx:for-item="item">   
+  <view class="hor forcast w">     
+    <view class="center">{{item.date}}</view>     
+    <view class="hor center ">       
+      <text>{{item.temperature}}{{item.weather}}</text>    
+    </view>     
+    <view class="hor center ">       
+      <image class="img" src="{{item.dayPictureUrl}}"></image>       
+      <text decode='{{true}}'>&nbsp;</text><!--空格字符-->       
+      <image class="img" src="{{item.nightPictureUrl}}"></image>     
+    </view>   
+  </view> 
+</view> 
+
 </view>
